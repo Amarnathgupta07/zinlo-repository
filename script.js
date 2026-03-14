@@ -25,6 +25,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ==========================================
+    // 1.2. MOBILE MENU TOGGLE
+    // ==========================================
+    const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+    const navLinks = document.querySelector(".nav-links");
+    const navItems = document.querySelectorAll(".nav-links a");
+    const mobileMenuIcon = document.querySelector(".mobile-menu-btn i");
+
+    mobileMenuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        
+        // Toggle icon between bars and times (close)
+        if (navLinks.classList.contains("active")) {
+            mobileMenuIcon.classList.remove("fa-bars");
+            mobileMenuIcon.classList.add("fa-times");
+            document.body.style.overflow = "hidden"; // Prevent scrolling behind menu
+        } else {
+            mobileMenuIcon.classList.remove("fa-times");
+            mobileMenuIcon.classList.add("fa-bars");
+            document.body.style.overflow = "";
+        }
+    });
+
+    // Close mobile menu when a link is clicked
+    navItems.forEach(item => {
+        item.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            mobileMenuIcon.classList.remove("fa-times");
+            mobileMenuIcon.classList.add("fa-bars");
+            document.body.style.overflow = "";
+        });
+    });
+
+    // ==========================================
     // 1.5. CUSTOM CURSOR
     // ==========================================
     const cursorDot = document.querySelector(".cursor-dot");
