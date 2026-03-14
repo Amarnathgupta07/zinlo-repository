@@ -85,6 +85,7 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100vw;
     transition: var(--transition-color);
 }
 
@@ -153,10 +154,12 @@ img {
 /* Global Parallax Blobs */
 .parallax-blob {
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 40vw;
+    height: 40vw;
+    max-width: 500px;
+    max-height: 500px;
     border-radius: 50%;
-    filter: blur(120px);
+    filter: blur(10vw);
     z-index: 0;
     opacity: 0.3;
     pointer-events: none;
@@ -434,15 +437,15 @@ section {
 [data-theme="dark"] .hero::before { background: rgba(139, 92, 246, 0.15); }
 [data-theme="light"] .hero::before { background: rgba(139, 92, 246, 0.2); }
 .hero::before {
-    top: -100px;
-    left: -200px;
+    top: -5%;
+    left: -10%;
 }
 
 [data-theme="dark"] .hero::after { background: rgba(59, 130, 246, 0.15); }
 [data-theme="light"] .hero::after { background: rgba(59, 130, 246, 0.2); }
 .hero::after {
-    bottom: -100px;
-    right: -200px;
+    bottom: -5%;
+    right: -10%;
 }
 
 .hero-container {
@@ -841,12 +844,13 @@ spline-viewer::part(logo) {
         min-height: 350px;
         max-height: 500px;
         margin-top: 1rem;
+        overflow: hidden; /* prevents spline from bleeding out */
     }
     
     .fallback-orb {
-        width: 250px;
-        height: 250px;
-        filter: blur(40px);
+        width: 60vw;
+        height: 60vw;
+        filter: blur(8vw);
     }
     
     .contact-container {
@@ -866,19 +870,43 @@ spline-viewer::part(logo) {
         --section-pad: 60px 20px;
     }
 
+    /* Mobile Menu Overlay */
     .nav-links {
-        display: none; /* Mobile menu implementation usually requires JS toggle class, keeping simple here */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg-alt);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links a {
+        font-size: 1.5rem;
     }
     
     .mobile-menu-btn {
         display: block;
+        position: relative;
+        z-index: 1000;
+        font-size: 1.8rem;
     }
     
     /* Ensure theme toggle remains visible on mobile in header */
     .theme-toggle {
         display: block;
         position: absolute;
-        right: 60px;
+        right: 70px;
+        z-index: 1000;
     }
 
     .section-header h2 {
