@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zinlo - Modern Digital Marketing Agency</title>
-    <meta name="description" content="We Grow Brands With Smart Digital Marketing. Premium web design, SEO, Paid Ads, and Social Media Management.">
-    
+    <meta name="description"
+        content="We Grow Brands With Smart Digital Marketing. Premium web design, SEO, Paid Ads, and Social Media Management.">
+
     <!-- Google Fonts: Outfit (Headings) and Inter (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
@@ -31,18 +36,36 @@
                 <a href="#why-us">Why Us</a>
                 <a href="#testimonials">Testimonials</a>
                 <a href="#contact" class="nav-btn">Get in Touch</a>
-                
-                <!-- Theme Toggle Button -->
+
+                <!-- Theme Toggle Button (desktop, inside nav) -->
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
                     <i class="fas fa-sun light-icon"></i>
                     <i class="fas fa-moon dark-icon"></i>
                 </button>
             </nav>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
+
+            <!-- Mobile-only: theme toggle + hamburger grouped so they never overflow -->
+            <div class="mobile-nav-actions">
+                <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-sun light-icon"></i>
+                    <i class="fas fa-moon dark-icon"></i>
+                </button>
+                <div class="mobile-menu-btn" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Slide-Down Menu Panel -->
+    <div class="mobile-menu-panel" id="mobile-menu-panel">
+        <nav class="mobile-menu-nav">
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#why-us" class="mobile-nav-link">Why Us</a>
+            <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+            <a href="#contact" class="mobile-nav-link mobile-nav-cta">Get in Touch</a>
+        </nav>
+    </div>
 
     <!-- Main Content wrapper for Lenis smooth scrolling -->
     <main id="smooth-wrapper">
@@ -57,20 +80,23 @@
                 <div class="hero-container">
                     <div class="hero-content gs-reveal">
                         <h1>We Grow Brands With <br><span class="gradient-text">Smart Digital Marketing</span></h1>
-                        <p>Elevate your online presence with data-driven strategies, stunning design, and measurable results. We are the unfair advantage your business needs.</p>
+                        <p>Elevate your online presence with data-driven strategies, stunning design, and measurable
+                            results. We are the unfair advantage your business needs.</p>
                         <div class="hero-buttons">
                             <a href="#contact" class="btn btn-primary">Get Started</a>
                             <a href="#services" class="btn btn-outline">View Services</a>
                         </div>
                     </div>
-                    
+
                     <!-- 3D Interactive Element via Spline -->
                     <div class="hero-3d-wrapper gs-reveal">
                         <div class="fallback-orb"></div>
                         <div class="hero-3d-container">
                             <!-- Free interactive 3D character (Boy) from Spline that looks at cursor -->
-                            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.5/build/spline-viewer.js"></script>
-                            <spline-viewer url="https://prod.spline.design/hlyp2Q8YvFMBi0mD/scene.splinecode"></spline-viewer>
+                            <script type="module"
+                                src="https://unpkg.com/@splinetool/viewer@1.9.5/build/spline-viewer.js"></script>
+                            <spline-viewer
+                                url="https://prod.spline.design/hlyp2Q8YvFMBi0mD/scene.splinecode"></spline-viewer>
                         </div>
                     </div>
                 </div>
@@ -87,7 +113,8 @@
                     <div class="glass-card tilt-card gs-reveal stagger-item">
                         <div class="card-icon"><i class="fas fa-hashtag"></i></div>
                         <h3>Social Media Management</h3>
-                        <p>Instagram & Facebook growth and management. We build communities, not just follower counts.</p>
+                        <p>Instagram & Facebook growth and management. We build communities, not just follower counts.
+                        </p>
                     </div>
                     <!-- Service Card 2 -->
                     <div class="glass-card tilt-card gs-reveal stagger-item">
@@ -105,13 +132,15 @@
                     <div class="glass-card tilt-card gs-reveal stagger-item">
                         <div class="card-icon"><i class="fas fa-search-dollar"></i></div>
                         <h3>SEO Optimization</h3>
-                        <p>Dominate search results. We rank your website on page one of Google for keywords that matter.</p>
+                        <p>Dominate search results. We rank your website on page one of Google for keywords that matter.
+                        </p>
                     </div>
                     <!-- Service Card 5 -->
                     <div class="glass-card tilt-card gs-reveal stagger-item">
                         <div class="card-icon"><i class="fas fa-video"></i></div>
                         <h3>Content Creation</h3>
-                        <p>Viral Reels, engaging posts, and premium creatives that capture attention and drive action.</p>
+                        <p>Viral Reels, engaging posts, and premium creatives that capture attention and drive action.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -156,42 +185,50 @@
                     <!-- Review 1 -->
                     <div class="glass-card tilt-card gs-reveal stagger-item">
                         <div class="review-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="review-text">"Zinlo completely transformed our online presence. Within 3 months, our organic lead flow doubled, and the new website they built converts like crazy. Highly recommended!"</p>
+                        <p class="review-text">"Zinlo completely transformed our online presence. Within 3 months, our
+                            organic lead flow doubled, and the new website they built converts like crazy. Highly
+                            recommended!"</p>
                         <div class="client-info">
                             <div class="client-avatar"><i class="fas fa-user-circle"></i></div>
                             <div class="client-details">
-                                <h4>Sarah Jenkins</h4>
-                                <span>Founder, Lumina E-com</span>
+                                <h4>Rajesh Sharma</h4>
+                                <span>Founder, Sharma Textiles</span>
                             </div>
                         </div>
                     </div>
                     <!-- Review 2 -->
                     <div class="glass-card tilt-card gs-reveal stagger-item">
                         <div class="review-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="review-text">"The paid ads campaigns they set up for us are bringing in an ROAS of 4.5x consistently. Fast communication and they genuinely care about our business growth."</p>
+                        <p class="review-text">"The paid ads campaigns they set up for us are bringing in an ROAS of
+                            4.5x consistently. Fast communication and they genuinely care about our business growth."
+                        </p>
                         <div class="client-info">
                             <div class="client-avatar"><i class="fas fa-user-circle"></i></div>
                             <div class="client-details">
-                                <h4>Marcus Thorne</h4>
-                                <span>CEO, TechFlow Solutions</span>
+                                <h4>Priya Patel</h4>
+                                <span>CEO, Spice Route Exports</span>
                             </div>
                         </div>
                     </div>
                     <!-- Review 3 -->
                     <div class="glass-card tilt-card gs-reveal stagger-item">
                         <div class="review-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="review-text">"Our social media engagement skyrocketed. They handle all our content creation now, from Reels to graphics, and the quality is absolutely premium."</p>
+                        <p class="review-text">"Our social media engagement skyrocketed. They handle all our content
+                            creation now, from Reels to graphics, and the quality is absolutely premium."</p>
                         <div class="client-info">
                             <div class="client-avatar"><i class="fas fa-user-circle"></i></div>
                             <div class="client-details">
-                                <h4>Elena Ramirez</h4>
-                                <span>Owner, Aura Lifestyle</span>
+                                <h4>Aniket Desai</h4>
+                                <span>Owner, Desai & Co. Consulting</span>
                             </div>
                         </div>
                     </div>
@@ -209,14 +246,15 @@
                             <p><i class="fas fa-map-marker-alt"></i> Available Worldwide</p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-form-wrapper">
                         <!-- Web3Forms Integration -->
-                        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="zinlo-contact">
+                        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form"
+                            id="zinlo-contact">
                             <!-- [!] Replace "YOUR_ACCESS_KEY_HERE" with your Web3Forms Access Key from web3forms.com -->
                             <input type="hidden" name="access_key" value="cf668ff4-e545-4d32-9e99-c9817a3a9977">
                             <input type="hidden" name="subject" value="New Inquiry from Zinlo Website">
-                            
+
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -231,13 +269,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project..."></textarea>
+                                <textarea id="message" name="message" rows="4" required
+                                    placeholder="Tell us about your project..."></textarea>
                             </div>
-                            
+
                             <!-- Optional redirect after submission -->
                             <input type="hidden" name="redirect" value="https://web3forms.com/success">
-                            
-                            <button type="submit" class="btn btn-primary submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+
+                            <button type="submit" class="btn btn-primary submit-btn">Send Message <i
+                                    class="fas fa-paper-plane"></i></button>
                         </form>
                     </div>
                 </div>
@@ -250,10 +290,7 @@
                         <h3>Zinlo<span>.</span></h3>
                         <p>We Grow Brands With Smart Digital Marketing.</p>
                         <div class="social-links">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/zinlo.in/" target="_blank"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="footer-links">
@@ -282,8 +319,9 @@
     <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    
+
     <!-- Custom Output -->
     <script src="script.js"></script>
 </body>
+
 </html>
